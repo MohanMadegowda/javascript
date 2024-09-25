@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Events</title>
+    </head>
+    <body>
+        <p id="demo"></p>
+        <!-- <button onclick="showTime()">time</button> -->
+
+
+
+
+
+
+<div class="input">
+    
+    <!-- <input id="input" type="number" min="2" max="100">
+      -->
+    <div id="valueInput"></div>
+    <button onclick="increment()">+</button>
+    <button onclick="decrement()">-</button>
+</div>
+
+    <script>
+        let value = 0;
+       let text =   document.getElementById('valueInput').innerHTML = value
+        function increment() {
+            value = value + 1
+            text = value
+            console.log(value);
+            // document.getElementById('input').stepUp(2);
+        }
+        
+        function decrement() {
+            value = value - 1
+            console.log(value);
+            // document.getElementById('input').stepDown(2);
+        }
+    </script>
+
+
+
+
+
+
+        <script src="/index.js"></script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+<div><button onclick="addElement()">click me</button>
+<p id="add"></p>
+</div>
+
+<script>
+    const fruits = ["banana", " orange", "mango", "apple"]
+   document.getElementById('add').innerHTML = fruits;
+
+    function addElement() {
+        // fruits.push("lemon");
+        fruits[fruits.length] = "lemon";
+        document.getElementById('add').innerHTML = fruits;
+    }
+</script>
+
+
+<script>
+    const cars = ["hyundai", " tata", "mahindra", "suzuki"];
+let car = cars.length;
+
+
+
+function myfunction(value) {
+    text1 += "<li>"+ value +"<li>";
+}
+document.getElementById("demo").innerHTML = text1;
+
+
+</script>
+
+<script>
+    const fruitss = ["Banana", "Orange", "Apple"];
+// fruitss[5] = "Lemon";
+
+let fff = fruitss.length;
+let text2 = "";
+for (i = 0; i < fff; i++) {
+  text2 += fruitss[i] + "<br>";
+}
+
+document.getElementById("demo").innerHTML = text2;
+</script>
+
+
+
+
+
+<script>
+    const fruit = ["Banana", "Orange", "Apple", " kiwi", "Mango"];
+    let fLen = fruit.length;
+    fruit.forEach(myfunction);
+    let tex = "<ul>";
+    for (let i = 0; i < fLen; i++) {
+      tex += "<li>" + fruit[i] + "</li>";
+    }
+    tex += "</ul>";
+    
+    document.getElementById("demo").innerHTML = tex;
+
+    function addPapaya() {
+        document.getElementById('demo').innerHTML = tex;    }
+    </script>
+
+
+
+
+
+<script>
+    let x = "";
+const myObj = {
+    name: "john",
+    age: 23,
+    cars : [
+        {name: "ford", models:["fiesta", "focus", "mustang"]},
+        {name: "bmw", models:["320", "x5", "x7"]},
+        {name: "hyundai", models:["creta", "verna", "i20"]},
+    ]
+}
+ 
+for (let i in myObj.cars) {
+    x += "<h2>" + myObj.cars[i].name + "</h2>";
+
+    for (let j in myObj.cars[i].models) {
+        x +=  myObj.cars[i].models[j] + "<br>";
+        
+    }
+}
+document.getElementById('demo').innerHTML = x;
+</script>
