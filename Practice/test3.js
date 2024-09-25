@@ -62,3 +62,24 @@ x();
 
 //finally succesfully uploaded to git
 //lets see the changes
+
+// git remote add origin https://github.com/MohanMadegowda/MohanMadegowda.git
+// git branch -M main
+// git push -u origin main
+
+ var u = 100;
+{
+    var u =-1;
+}
+{
+    let v = u;
+}
+{
+    let v = -200;
+}
+console.log(v);
+
+
+ var v = 12;
+{var v = 32;}
+console.log(v);
